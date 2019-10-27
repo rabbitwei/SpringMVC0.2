@@ -34,9 +34,9 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!--运行.jpg的文件被访问。-->
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.jpg</url-pattern>
-    </servlet-mapping>
+    <!--运行.jpg的文件被访问。直接使用标签：<mvc:default-servlet-handler/>就行了-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>default</servlet-name>-->
+        <!--<url-pattern>*.jpg</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>
