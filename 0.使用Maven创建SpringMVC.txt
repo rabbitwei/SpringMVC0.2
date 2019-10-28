@@ -1,8 +1,8 @@
 1. 使用 Maven 工具创建 web项目使用的 archetype-webapp选项，
-   创建之后默认是只有main 目录， main 目录下只有 resources 和 webapp 目录。
-   注意：这里的 resources 目录的位置和 springBoot 项目的 resources 目录的位置是不同的。
+   创建之后默认是只有main 目录， main 目录下只有 webapp 目录。
+   注意：这里的 resources 目录的位置和 springBoot 项目的 resources 目录的位置是相同的。
 
-   1. maven 工程的 resources 目录在 main 目录下，test 目录和 main 目录是同级关系
+   1. maven 工程的 resources 目录和 main 目录同级，test 目录和 main 目录是同级关系
 
    2. springBoot 工程的 resources  目录和 main 目录是同级的关系，而且还和 test 目录是同级关系
       resources main test 在 springBoot 项目里都是 src的子目录，三者都是同级关系。
