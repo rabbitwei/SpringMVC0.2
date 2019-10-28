@@ -14,7 +14,7 @@ import java.io.IOException;
  * @ExceptionHandler，可以处理异常, 但是仅限于当前Controller中处理异常
  * 所以结合两者使用,就可以处理全局的异常了.
  */
-@ControllerAdvice
+@ControllerAdvice()
 public class GlobalException {
     //使用注解的方式，来创建统一异常处理
     @ExceptionHandler(IOException.class)    //指定捕获的异常

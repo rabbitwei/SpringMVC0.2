@@ -7,6 +7,13 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  ">
 
+
+    <mvc:default-servlet-handler/>
+    <!--扫描 controller 包下的 @Controller 注解-->
+    <context:component-scan base-package="cn.rabbit.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+
+    </context:component-scan>
     <!--视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
@@ -14,25 +21,9 @@
     </bean>
 
 
-    <!--可以访问静态资源-->
-    <mvc:default-servlet-handler/>
-    <!--注册已经存在IOC容器中的bean，并且不能缺少，因为它负责注册 RequestMappingHandlerMapping，
-    请求映射的bean，没有该 bean无法通过 url 访问 controller-->
-    <mvc:annotation-driven/>
-
-    <!--扫描注解-->
-    <!--<context:annotation-config/>--> <!--下面的标签包含了该功能-->
-    <context:component-scan base-package="cn.rabbit"/>
-
     <!--开启文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- 设置上传文件的最大尺寸为5MB -->
         <!--<property name="maxUploadSize" value="5242880"/>-->
     </bean>
-
-
-    <!--使用xml 来配置统一异常-->
-    <!-- 定义统一异常处理器 -->
-    <bean class="cn.rabbit.exception.GlobalExceptionUseXML"/>
-
 </beans>

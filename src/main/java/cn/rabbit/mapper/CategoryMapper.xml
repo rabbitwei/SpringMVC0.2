@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.rabbit.mapper.CategoryMapper">
+    <insert id="add" parameterType="Category">
+        insert into category_ (name) values (#{name})
+    </insert>
+    <update id="update" parameterType="Category">
+        update category_ set name = #{name} where id = #{id}
+    </update>
+    <delete id="delete" parameterType="Category">
+        delete from category_ where id = #{id}
+    </delete>
+    <select id="list" resultType="Category">
+        select * from category_
+    </select>
+    <select id="get" resultType="Category" parameterType="Category">
+        select * from category_ where id = #{id}
+    </select>
+    <select id="alterId" parameterType="_int">
+        alter table `category_` auto_increment = 1;
+    </select>
+</mapper>
