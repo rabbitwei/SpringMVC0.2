@@ -40,9 +40,9 @@
         <property name="mapperLocations" value="classpath:cn/rabbit/mapper/CategoryMapper.xml"/>
     </bean>
 
-    <!--使用的是xml 方式的讲 mapper 添加 IOC 容器-->
+    <!--使用的是xml 方式的将 dao层的 mapper 添加 IOC 容器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="cn.rabbit.mapper"/>
+        <property name="basePackage" value="cn.rabbit.dao"/>
     </bean>
 
 </beans>

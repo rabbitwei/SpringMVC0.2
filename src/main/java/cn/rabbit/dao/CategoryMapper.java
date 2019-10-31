@@ -1,4 +1,4 @@
-package cn.rabbit.mapper;
+package cn.rabbit.dao;
 
 import cn.rabbit.pojo.Category;
 import org.springframework.stereotype.Component;

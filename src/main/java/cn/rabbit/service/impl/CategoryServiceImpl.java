@@ -1,6 +1,6 @@
 package cn.rabbit.service.impl;
 
-import cn.rabbit.mapper.CategoryMapper;
+import cn.rabbit.dao.CategoryMapper;
 import cn.rabbit.pojo.Category;
 import cn.rabbit.service.CategoryService;
 import org.springframework.stereotype.Service;
